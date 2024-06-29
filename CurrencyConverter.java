@@ -12,7 +12,7 @@ public class CurrencyConverter {
         System.out.println("| Welcome to currency converter, please select the currency you want to convert |");
         System.out.println("--------------------------------------------------------------------------------");
         System.out.println();
-        System.out.println("List of currencies available for exchange, please select a valid currency number:");
+        System.out.println("List of currencies available for exchange, please select a valid country currency number:");
         System.out.println("1. Kuwaiti Dinar (KWD)\n" +
                            "2. Bahraini Dinar (BHD)\n" +
                            "3. Omani Rial (OMR)\n" +
@@ -29,13 +29,13 @@ public class CurrencyConverter {
                            "14. Brunei Dollar (BND)\n" +
                            "15. Indian Rupee (INR)");
         System.out.println();
-        System.out.print("Select the currency you have for exchange: ");
+        System.out.print("select the currency you have for exchange: ");
         double currency1 = input.nextDouble();
         System.out.println();
-        System.out.print("Enter the amount to convert: ");
+        System.out.print("enter the amount to convert: ");
         double amount = input.nextDouble();
         System.out.println();
-        System.out.print("Select the currency you want to exchange to (enter the number): ");
+        System.out.print("select the currency you want to exchange to (enter the number): ");
         int currency2 = input.nextInt();
 
         double exchangeRate = 0;
@@ -103,12 +103,12 @@ public class CurrencyConverter {
                 exchangeRate = 0.012;
                 break;
             default:
-                System.out.println("Invalid selection. Please run the program again and select a valid currency number.");
+                System.out.println("invalid selection please run the program again and select a valid currency number.");
                 System.exit(0);
         }
 
         double finalCurrency = convert(amount, exchangeRate);
-        System.out.println("You have selected " + currencyName);
-        System.out.println("Converted amount: " + finalCurrency);
+        System.out.println("you have selected " + currencyName);
+        System.out.println("converted amount: " + finalCurrency);
     }
 }
